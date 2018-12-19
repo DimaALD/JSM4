@@ -4,6 +4,7 @@ const browser = protractor.browser
 const element = protractor.element
 const by = protractor.by
 const Key = protractor.Key
+const EC = protractor.ExpectedConditions
 
 function logIn() {
     element(by.css('button#nav-mlife')).click()
@@ -42,6 +43,7 @@ function getInfo(){
     element(by.css('[href ^= "/content/mgm"]')).click()
     return element(by.className('description-text')).getText()
 }
+
 module.exports = {
     logIn,
     inputGroupName,
@@ -50,5 +52,4 @@ module.exports = {
     getGroupName,
     clickResorts,
     getInfo
-
 }
